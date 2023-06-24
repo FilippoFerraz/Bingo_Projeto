@@ -1,3 +1,7 @@
+var jogadores = [];
+var numeros_sorteados = [];
+
+
 
 function CriarCartela (jogador){
 
@@ -90,10 +94,6 @@ function GerarNumeros(){
   gerarColuna(5, 46, 60),
   gerarColuna(5, 61, 75)];
 
-
-
-
-  console.log(cartela);
  return cartela;
 
 }
@@ -112,7 +112,36 @@ const jogador = {
  cartela: cartela
 
 }
-
+jogadores.push(jogador);
 CriarCartela(jogador);
 
+}
+
+function jogar(){
+  if(jogadores.length < 2){
+  alert('É preciso pelo menos 2 jogadores!');
+  return;
+  }
+
+  const intervalo = setInterval(function(){
+   
+
+  while(true){
+    var aleatorio = Math.floor(Math.random()*75 + 1);
+  if(!numeros_sorteados.includes(aleatorio)){
+   numeros_sorteados.push(aleatorio);
+   break;
+
+
+  }
+
+
+  }
+  const body_numeros = document.querySelector('.sortear-numero');
+  const span = document.createElement('span');
+  span.innerText = aleatorio;
+
+  body_numeros.appendChild(span);
+  console.log(numeros_sorteados);
+  }, 1000)
 }
