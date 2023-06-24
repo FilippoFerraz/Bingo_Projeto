@@ -142,6 +142,29 @@ function jogar(){
   span.innerText = aleatorio;
 
   body_numeros.appendChild(span);
+
+   conferirJogo(aleatorio);
+
+
+
+
+
+
   console.log(numeros_sorteados);
+
   }, 1000)
+}
+
+function conferirJogo(sorteado){
+  var numeors_cartelas = document.getElementsByTagName('td');
+ 
+   for(var i = 0; i < numeors_cartelas.length; i++){
+    if(numeors_cartelas[i].innerText == sorteado    )
+    {
+   numeors_cartelas[i].style.backgroundColor = '#247BA0'
+
+    }
+
+   }
+
 }
