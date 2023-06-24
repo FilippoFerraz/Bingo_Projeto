@@ -1,0 +1,168 @@
+*{ padding: 0px;
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{ 
+ 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ 
+    flex-direction: column;
+    display: flex;
+    background-color: #e8f1f2;}
+header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+   background-color: #247BA0 ;
+ color: white;
+}
+
+h1{ display: flex;
+    justify-content: end;
+    width: 53.5%;}
+
+
+
+img{ margin-left: 1vh;
+  margin-right: 1vh;
+    height: 55px;}
+ .cabecario{
+    
+    display: flex;
+ width: 46.5%;
+ justify-content: end;
+
+}
+h4{ display: flex;
+align-items: center;
+
+justify-content: center;
+}
+
+footer{ 
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+height: 5vh;
+background-color: #006494;
+}
+.texto-footer{ color: white;}
+
+nav{ 
+    margin-top: 1%;
+    
+  
+ 
+  
+  display: flex;
+
+
+}
+
+#cartas{ display: flex;
+  justify-content: space-around;
+width: 110vh;
+
+}
+.cartelas{ display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+
+.sortear-numero{ 
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+height: 20vh;
+}
+
+
+.escolher{ 
+  border: solid 2px;
+  border-color: #006494;
+  
+  }
+
+.botao{ 
+  
+  transition: 0.7s;
+ background-color: #006494;
+  margin-top: 5px;
+    border-radius: 30px;
+    width: 100px;
+    height: 23px;
+    border: solid 3px #006494;
+   
+    
+  }
+  .botao:hover{ background-color: #e8f1f2;}
+
+.gerar-cartelas{
+  display: flex;
+ flex-direction: column;
+ width: 370px;
+
+ }
+
+ .cartelas-geradas{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px;
+  align-items: center;
+
+
+ }
+
+ 
+ .botaos{display: flex;
+  flex-direction: column;
+ align-items: center; 
+  
+
+}
+
+ table{font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+
+}
+
+
+.bloco2{ 
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 10px;
+}
+table, td, th{ border: solid 1px black;
+border-collapse: collapse;
+
+}
+
+
+th, td{ width: 30px;
+
+height: 30px;
+
+
+}
+
+
+.espaco{
+height: 5vh;
+
+}
+
+
+
