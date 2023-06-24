@@ -1,8 +1,5 @@
 
-
-
-
-function CriarCartela (){
+function CriarCartela (jogador){
 
   GerarNumeros();
 
@@ -16,7 +13,7 @@ function CriarCartela (){
  pai_das_cartelas.appendChild(div_cartelas);
 
  var nome_jogador = document.createElement('h4');
- nome_jogador.innerText = "nome Jogador";
+ nome_jogador.innerText = jogador.nome;
 
  div_cartelas.appendChild(nome_jogador);
 
@@ -54,7 +51,7 @@ var tr = document.createElement ('tr');
 
  for( var j = 0; j < 5; j++){
   var td = document.createElement('td');
- td.innerText = 'X';
+ td.innerText = jogador.cartela[j][i];
  tr.appendChild(td)
  }
 
@@ -62,37 +59,37 @@ var tr = document.createElement ('tr');
 tbody.appendChild(tr)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 tabela.appendChild(thead);
 tabela.appendChild(tbody);
 }
 
+function gerarColuna(quantidade, inicio, fim ){
+   var coluna = [];
+
+   while(coluna.length < quantidade){
+   var aleatorio = Math.floor(Math.random()*(fim - inicio) + inicio);
+   if(!coluna.includes(aleatorio)){
+   coluna.push(aleatorio);
+    
+   }
+
+
+   }
+
+  return coluna;
+
+
+}
+
 function GerarNumeros(){
 
-  var cartela = [];
+  var cartela = [
+  gerarColuna(5, 1, 15), 
+  gerarColuna(5, 16, 30), 
+  gerarColuna(5, 31, 45),
+  gerarColuna(5, 46, 60),
+  gerarColuna(5, 61, 75)];
 
- while(cartela.length < 25){
-  var aleatorio = Math.floor(Math.random()*75 
-  + 1);
- if(!cartela.includes(aleatorio)){
-  cartela.push(aleatorio);
-
- }
-}
 
 
 
@@ -101,8 +98,21 @@ function GerarNumeros(){
 
 }
 
+function inscreverJogador(){
+ const nome = prompt('digite o nome do jogador:');
 
+ if(nome.length < 4 ){
+  alert('nome precisa de mais que 4 caracteres');
+  return;
+ }
+ const cartela = GerarNumeros();
 
+const jogador = {
+ nome: nome,
+ cartela: cartela
 
+}
 
-  
+CriarCartela(jogador);
+
+}
